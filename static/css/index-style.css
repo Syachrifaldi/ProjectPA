@@ -6,9 +6,9 @@
 }
 
 .hero {
-	height: 100vh;
+	height: 89vh;
 	width: 100%;
-	background-image: url(https://images.wallpaperscraft.com/image/single/laptop_keyboard_glow_170138_3840x2400.jpg);
+	background-image: url("https://github.com/Syachrifaldi/mini_project_AI/blob/main/download%20(1).jpeg?raw=true");
 	background-size: cover;
 	background-position: center;
 }
@@ -77,12 +77,15 @@ h1 {
 	color: white;
 	margin: 20px 0px 20px;
 	font-size: 75px;
+	font-family:comic sans;
 }
 
 h3 {
 	color: white;
 	font-size: 25px;
 	margin-bottom: 50px;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	font-style:italic;
 }
 
 h4 {
@@ -122,13 +125,15 @@ h4 {
 
 .about {
 	width: 100%;
-	padding: 100px 0px;
-	background-color: #191919;
+	padding: 100px;
+	background-image: url(https://github.com/Syachrifaldi/ProjectPA/blob/main/static/img/20221202_100437.jpg?raw=true);
+	background-size: cover	;
+	background-position: center;
 }
 
 .about img {
-	height: auto;
-	width: 430px;
+	height: 75vh;
+	width: 600px;
 }
 
 .about-text {
@@ -217,11 +222,14 @@ button:hover {
 	text-align: center;
 }
 
+.card img {
+	width: 40%;
+}
 .card i {
 	font-size: 50px;
 	display: block;
 	text-align: center;
-	margin: 25px 0px;
+	margin: 5px 0px;
 	color: #f9004d;
 
 }
@@ -229,7 +237,8 @@ button:hover {
 h5 {
 	color: white;
 	font-size: 23px;
-	margin-bottom: 15px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 .pra p {
@@ -256,92 +265,128 @@ h5 {
 	cursor: pointer;
 }
 
-.contact-me {
-	width: 100%;
-	height: 290px;
-	background: #191919;
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	justify-content: center;
+
+:root {
+    --primary: #99ccff;
 }
 
-.contact-me p {
-	color: white;
-	font-size: 30px;
-	font-weight: bold;
-	margin-bottom: 25px;
+body {
+    background-color: #1b1b1b;
+    color: white;
 }
 
-.contact-me .button-two {
-	background-color: #f9004d;
-	color: white;
-	text-decoration: none;
-	border: 2px solid transparent;
-	font-weight: bold;
-	padding: 13px 30px;
-	border-radius: 30px;
-	transition: .4s;
+.header {
+    text-align: center;
+    margin: auto;
+    max-width: 50vh;
+    padding-block: 48px;
+    margin-bottom: 48px;
+    border-bottom: 2px;
+    color: #ffffff;
+    font-size: 32px;
+    letter-spacing: 4px;
 }
 
-.contact-me .button-two:hover {
-	background-color: transparent;
-	border: 2px solid #f9004d;
-	cursor: pointer;
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
 }
 
-footer {
-	position: relative;
-	width: 100%;
-	height: 400px;
-	background: #101010;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+.team {
+    width: 320px;
+    height: 480px;
+    overflow: hidden;
+    margin: 10px;
+    border: 2px solid var(--primary);
+    border-radius: 16px;
+    position: relative;
+    background-color:radial-gradient (#ffffff,#99ccff);
 }
 
-footer p:nth-child(1) {
-	font-size: 30px;
-	color: white;
-	margin-bottom: 20px;
-	font-weight: bold;
+.team::before {
+    content: '';
+    background-image: var(--img);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    filter: blur(4px) grayscale(100%);
 }
 
-footer p:nth-child(2) {
-	color: white;
-	font-size: 17px;
-	width: 500px;
-	text-align: center;
-	line-height: 26px;
+.team img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 320px;
+    height: 480px;
+    border-radius: 16px;
+    z-index: 3;
+    object-fit: cover;
+    border: none;
 }
 
-.social {
-	display: flex;
+.team:hover img {
+    width: 160px;
+    height: 240px;
+    border: 2px solid var(--primary);
+    left: 80px;
+    top: 60px;
 }
 
-.social a {
-	width: 45px;
-	height: 45px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background: #f9004d;
-	border-radius: 50%;
-	margin: 22px 10px;
-	color: white;
-	text-decoration: none;
-	font-size: 20px;
+.team .info {
+    background-color: white;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    color: #363636;
+    padding: 16px;
+    border-top: 8px solid var(--primary);
+    border-radius: 50% 50% 0px 0px;
+    padding-top: 80px;
+    text-align: center;
+    transform: scale(2)
 }
 
-.social a:hover {
-	transform: scale(1.3);
-	transition: .3s;
+.team .name {
+    font-size: 24px;
+    padding: 16px;
+    text-transform: capitalize;
 }
 
-.end {
-	position: absolute;
-	color: #f9004d;
-	bottom: 35px;
-	font-size: 14px;
+.team .title {
+    color: grey;
+    text-transform: capitalize;
+}
+
+.team:hover .info {
+    transform: scale(1)
+}
+
+.team .social {
+    padding-block: 16px;
+    font-size: 24px;
+}
+
+.team .social i {
+    display: inline-block;
+    width: 48px;
+    padding: 12px;
+    background-color: #ededed;
+    border-radius: 16px;
+    margin: 4px;
+    cursor: pointer;
+}
+
+.team .social i:hover {
+    color: var(--primary);
+    background-color: #363636;
+
 }
